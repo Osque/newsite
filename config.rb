@@ -41,8 +41,10 @@ end
 
 activate :deploy do |deploy|
   deploy.build_before = true
+  deploy.branch = 'master'
   deploy.deploy_method = :git
 end
+
 
 redirect "index.html", to: "fr/home.html"
 redirect "fr/index.html", to: "fr/home.html"
