@@ -1,3 +1,4 @@
+ruby '2.4.3'
 source 'https://rubygems.org'
 
 gem 'middleman', '~> 4.2'
@@ -16,3 +17,4 @@ gem 'middleman-google-analytics'
 gem 'middleman-protect-emails'
 gem 'middleman-minify-html'
 gem 'rake'
+
