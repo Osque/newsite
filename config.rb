@@ -1,7 +1,27 @@
+###
+# Google Analytics
+###
+activate :google_analytics do |ga|
+    ga.tracking_id = data.settings.google_analytics.tracking_code
+    ga.anonymize_ip = true
+    ga.debug = false
+    ga.development = false
+    ga.minify = true
+end
+
+# Minification
+activate :minify_css
+activate :minify_javascript
+activate :minify_html, remove_input_attributes: false
+
+# Gzip compression
+ activate :gzip
+
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+activate :protect_emails
 activate :sprockets
 activate :i18n, :mount_at_root => false
 activate :directory_indexes
