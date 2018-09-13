@@ -1,14 +1,3 @@
-###
-# Google Analytics
-###
-activate :google_analytics do |ga|
-    ga.tracking_id = data.settings.google_analytics.tracking_code
-    ga.anonymize_ip = true
-    ga.debug = false
-    ga.development = false
-    ga.minify = true
-end
-
 # Minification
 activate :minify_css
 activate :minify_javascript
@@ -41,7 +30,6 @@ end
 
 activate :deploy do |deploy|
   deploy.build_before = true
-  deploy.branch = 'master'
   deploy.deploy_method = :git
 end
 
