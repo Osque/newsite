@@ -10,6 +10,7 @@ gem 'pry-byebug', require: true
 gem 'font-awesome-middleman'
 gem 'font-awesome-sass'
 gem 'bootstrap-sass'
+gem  'sassc', '~> 1.12.1'
 gem 'jquery-middleman'
 gem 'middleman-google-analytics'
 gem 'middleman-protect-emails'

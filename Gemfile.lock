@@ -164,6 +164,7 @@ DEPENDENCIES
   middleman-protect-emails
   middleman-sprockets
   pry-byebug
+  sassc (~> 1.12.1)
 
 BUNDLED WITH
    1.16.4
