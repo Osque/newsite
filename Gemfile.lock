@@ -177,6 +177,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   bourbon
+  bundler
   font-awesome-middleman
   font-awesome-sass
   jquery-middleman
