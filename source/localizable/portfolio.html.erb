@@ -1,0 +1,201 @@
+<body class="hidden">
+
+  <main>
+
+  <div class="cd-index cd-main-content">
+
+  <!-- Page Content -->
+  <div id="page-content" class="" data-bgcolor="#eee">
+
+        <!-- Background Lines -->
+        <div class="bg-lines hidden">
+            <svg>
+          <line x1="20%" y1="100%" x2="80%" y2="0"/>
+        <line x1="80%" y1="100%" x2="20%" y2="0"/>
+        </svg>
+        </div>
+        <!--/Background Lines -->
+
+
+
+        <!-- Header -->
+        <header class="scroll-hide">
+            <div id="header-container">
+
+            <!-- Logo -->
+            <div id="logo">
+                <a class="ajax-link" data-type="page-transition" href="home">
+                    <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
+                    <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
+                </a>
+            </div>
+            <!--/Logo -->
+
+            <!-- Menu Burger -->
+            <div id="burger-wrapper">
+              <div id="burger-circle"></div>
+                <div id="menu-burger">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!--/Menu Burger -->
+
+            </div>
+        </header>
+        <!--/Header -->
+
+
+        <!-- Menu Overlay -->
+        <div id="menu-overlay">
+
+            <div id="close-menu"></div>
+
+            <div class="outer">
+                <div class="inner">
+
+                    <nav>
+                        <ul class="main-menu">
+                            <li class="mp"><a class="ajax-link menu-link" data-type="page-transition" href="home"><span></span>Home</a></li>
+                            <li class="mp active"><a class="ajax-link menu-link" data-type="page-transition" href="portfolio"><span></span>Portfolio</a></li>
+                            <li class="mp"><a class="ajax-link menu-link" data-type="page-transition" href="contact"><span></span>Contact</a></li>
+                            <li>  <% if I18n.locale == :fr %>
+                                    <%= link_to (image_tag "UK.png", height: 50), "/en/#{current_page.path.split('/').last}" %>
+                                  <% else %>
+                                      <%= link_to (image_tag "France.png", height: 50), "/fr/#{current_page.path.split('/').last}" %>
+                                  <% end %>
+                            </li>
+                        </ul>
+                    </nav>
+
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Menu Overlay -->
+
+
+
+        <!-- Showcase Holder -->
+        <div id="showcase-holder">
+            <div id="showcase-slider">
+
+
+                <!-- Section Slide -->
+                <div class="section light-content">
+
+                    <div class="img-mask">
+                            <div class="img-perspective">
+                                <div class="img-split">
+                                   <a href="https://www.pyp-fishing.com/" target="_blank"> <div class="section-image" data-src="/images/pyp.png"></div>
+                                    <div class="section-image-mirror"></div> </a>
+                                </div>
+                            </div>
+                         </a>
+                    </div>
+
+                    <div class="section-shadow"></div>
+
+                    <div class="section-caption-outer">
+                        <div class="section-caption-inner">
+                            <h2 class="section-title sa-one" >Pin Your Passion</h2>
+                            <p class="section-subtitle sa-two">Web Fishing App</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/Section Slide -->
+
+
+                <!-- Section Slide -->
+                <div class="section light-content">
+
+                    <div class="img-mask">
+                            <div class="img-perspective">
+                                <div class="img-split">
+                                   <a href="https://www.pyp-fishing.com/" target="_blank"> <div class="section-image" data-src="/images/pyp.png"></div>
+                                    <div class="section-image-mirror"></div> </a>
+                                </div>
+                            </div>
+                         </a>
+                    </div>
+
+                    <div class="section-shadow"></div>
+
+                    <div class="section-caption-outer">
+                        <div class="section-caption-inner">
+                            <h2 class="section-title sa-one" >Pin Your Passion</h2>
+                            <p class="section-subtitle sa-two">Web Fishing App</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/Section Slide -->
+
+            </div>
+        </div>
+        <!-- Showcase Holder -->
+
+
+        <!-- Footer -->
+        <footer class="after-slider">
+            <div id="footer-container">
+
+                <div id="page-action-holder-left" data-tooltip="Prev" data-placement="right">
+                    <div id="prev-slide">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="20px" y="20px" width="40px" height="40px" viewBox="0 0 80 80" xml:space="preserve">
+                            <circle class="circle-action is-inner" cx="40" cy="40" r="36" />
+                            <circle class="circle-action is-outer" cx="40" cy="40" r="36" />
+                        </svg>
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        <div class="circle-line"></div>
+                    </div>
+                </div>
+
+                <div id="page-action-holder-right" data-tooltip="Next" data-placement="left">
+                    <div id="next-slide">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="10px" y="10px" width="40px" height="40px" viewBox="0 0 80 80" xml:space="preserve">
+                            <circle class="circle-action is-inner" cx="40" cy="40" r="36" />
+                            <circle class="circle-action is-outer" cx="40" cy="40" r="36" />
+                        </svg>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <div class="circle-line"></div>
+                    </div>
+                </div>
+
+                <ul class="socials-text">
+                    <li><a href="https://www.linkedin.com/in/oscar-maybon-8425276a/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/Osque" target="_blank"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://www.dribbble.com/Osque" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                </ul>
+
+                <p class="copyright">2018 © MosDev</p>
+
+          </div>
+        </footer>
+        <!--/Footer -->
+
+
+  </div>
+  <!--/Page Content -->
+
+    <div id="rotate-device"></div>
+
+
+    </div>
+</main>
+
+
+    <div class="cd-cover-layer"></div>
+
+
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/plugins.js"></script>
+    <script src="javascripts/scripts.js"></script>
+
+
+
+</body>
+
+</html>
