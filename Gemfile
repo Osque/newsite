@@ -8,7 +8,6 @@ gem 'pry-byebug', require: true
 
 # Assets
 gem 'font-awesome-middleman'
-gem 'font-awesome-sass'
 gem 'bootstrap-sass'
 gem 'jquery-middleman'
 gem 'middleman-google-analytics'
