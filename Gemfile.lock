@@ -127,6 +127,7 @@ GEM
       pry (~> 0.10)
     ptools (1.3.5)
     public_suffix (3.0.3)
+    puma (3.11.4)
     rack (2.0.5)
     rake (12.3.1)
     rb-fsevent (0.10.3)
@@ -165,6 +166,7 @@ DEPENDENCIES
   middleman-protect-emails
   middleman-sprockets
   pry-byebug
+  puma
   rake
   sassc (~> 1.12.1)
 
