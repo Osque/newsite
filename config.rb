@@ -12,7 +12,7 @@ end
 
 activate :protect_emails
 activate :sprockets
-activate :i18n, :mount_at_root => false
+activate :i18n, :mount_at_root => :fr
 activate :directory_indexes
 set :trailing_slash, false
 
@@ -33,8 +33,3 @@ activate :deploy do |deploy|
   deploy.deploy_method = :git
 end
 
-
-redirect "index.html", to: "fr/home.html"
-redirect "fr/index.html", to: "fr/home.html"
-redirect "home.html", to: "fr/home.html"
-redirect "en/index.html", to: "en/home.html"
