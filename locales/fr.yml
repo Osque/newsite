@@ -7,4 +7,4 @@ fr:
   tpres: "Votre projet web sur mesure"
   ppres: "Conception de site internet, boutique e-commerce ou application web à votre image et adapté à tous les supports numériques (ordinateurs, smartphones et tablettes)"
   paths:
-    index: "home"
+    # index: "home"
