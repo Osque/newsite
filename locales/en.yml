@@ -7,4 +7,4 @@ en:
   tpres: "Your web project made to measure"
   ppres: "Website, online shop or web app according to your image and adapted to all digital media (computers, smartphones and tablets)"
   paths:
-    # index: "home"
+    index: "home"
