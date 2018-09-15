@@ -28,3 +28,7 @@ activate :deploy do |deploy|
   deploy.deploy_method = :git
 end
 
+redirect "index.html", to: "fr/home.html"
+redirect "fr/index.html", to: "fr/home.html"
+redirect "home.html", to: "fr/home.html"
+redirect "en/index.html", to: "en/home.html"
