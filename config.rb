@@ -1,8 +1,3 @@
-# Minification
-activate :minify_css
-activate :minify_javascript
-activate :minify_html, remove_input_attributes: false
-
 # Gzip compression
  activate :gzip
 
@@ -12,7 +7,7 @@ end
 
 activate :protect_emails
 activate :sprockets
-activate :i18n, :mount_at_root => :fr
+activate :i18n, :mount_at_root => :false
 activate :directory_indexes
 set :trailing_slash, false
 
