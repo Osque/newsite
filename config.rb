@@ -1,13 +1,9 @@
-# Gzip compression
- activate :gzip
-
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-activate :protect_emails
 activate :sprockets
-activate :i18n, :mount_at_root => :false
+activate :i18n, :mount_at_root => false
 activate :directory_indexes
 set :trailing_slash, false
 
