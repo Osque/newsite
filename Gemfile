@@ -28,5 +28,6 @@ gem 'middleman-google-analytics'
 gem 'middleman-protect-emails'
 gem 'middleman-minify-html'
 gem 'rake'
-gem 'puma'
 gem 'bundler'
+gem 'middleman-gh-pages'
+
