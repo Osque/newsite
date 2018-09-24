@@ -24,10 +24,17 @@
 
             <!-- Logo -->
             <div id="logo">
-                <a class="ajax-link" data-type="page-transition" href="home">
-                    <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
-                    <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
-                </a>
+                <% if I18n.locale == :fr %>
+                  <a class="ajax-link" data-type="page-transition" href="http://www.mosdev.fr/en/home">
+                  <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
+                  <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
+                  </a>
+                <% else %>
+                  <a class="ajax-link" data-type="page-transition" href="http://www.mosdev.fr/fr/home">
+                  <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
+                  <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
+                  </a>
+                <% end %>
             </div>
             <!--/Logo -->
 
@@ -56,15 +63,18 @@
 
                     <nav>
                         <ul class="main-menu">
-                            <li class="mp active"><a class="ajax-link menu-link" data-type="page-transition" href="home"><span></span>Home</a></li>
-                            <li class="mp"><a class="ajax-link menu-link" data-type="page-transition" href="portfolio"><span></span>Portfolio</a></li>
-                            <li class="mp"><a class="ajax-link menu-link" data-type="page-transition" href="contact"><span></span>Contact</a></li>
-                            <li>   <% if I18n.locale == :fr %>
-                                      <%= link_to (image_tag "UK.png", height: 50), "/en/#{current_page.path.split('/').last}" %>
-                                  <% else %>
-                                      <%= link_to (image_tag "France.png", height: 50), "/fr/#{current_page.path.split('/').last}" %>
-                                  <% end %>
-                            </li>
+
+                          <% if I18n.locale == :fr %>
+                            <li class="mp active"> <%= link_to "Home", "http://www.mosdev.fr/en/home" %> </li>
+                            <li class="mp"> <%= link_to "Portfolio", "http://www.mosdev.fr/en/portfolio" %> </li>
+                            <li class="mp"> <%= link_to "Contact", "http://www.mosdev.fr/en/contact" %> </li>
+                            <li> <%= link_to (image_tag "UK.png", height: 50), "/en/#{current_page.path.split('/').last}" %> </li>
+                          <% else %>
+                            <li class="mp active"> <%= link_to "Home", "http://www.mosdev.fr/fr/home" %> </li>
+                            <li class="mp"> <%= link_to "Portfolio", "http://www.mosdev.fr/fr/portfolio" %> </li>
+                            <li class="mp"> <%= link_to "Contact", "http://www.mosdev.fr/fr/contact" %> </li>
+                            <li> <%= link_to (image_tag "France.png", height: 50), "/fr/#{current_page.path.split('/').last}" %> </li>
+                          <% end %>
                         </ul>
                     </nav>
 
