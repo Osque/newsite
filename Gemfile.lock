@@ -96,7 +96,7 @@ GEM
       uglifier (~> 3.0)
     middleman-sprockets (4.1.1)
       middleman-core (~> 4.0)
-      sprockets (>= 3.0)
+      sprockets (>= 3.7.2)
     middleman-trailing_slashes (0.0.1)
       middleman-core (>= 3.3.10)
     minitest (5.11.3)
