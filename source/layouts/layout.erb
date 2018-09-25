@@ -6,10 +6,16 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title>MosDev | Freelance web <%= t("developer") %><%= current_page.data.title %></title>
+    <title>
+      <% if I18n.locale == :fr %>
+        Oscar Maybon | Web développeur freelance à Bordeaux <%= current_page.data.title %>
+      <% else %>
+        Oscar Maybon | Freelance web developer in Bordeaux <%= current_page.data.title %>
+      <% end %>
+    </title>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "application" %>
-    <%= favicon_tag 'images/favicons/favicon.ico' %>
+    <%= favicon_tag 'images/favicons/favicon.png' %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">

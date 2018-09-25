@@ -1,10 +1,14 @@
 en:
   hello: "Hello"
   developer: "developer"
+  presentation: "Freelance web developer"
+  name: "Name"
   phone: "Phone"
+  message: "Your message"
+  submit: "Submit"
   contact-title: "Contact me"
   contact-text: "To let me know about your project, you can use the contact form next to or consult my contact informations."
   tpres: "Your web project made to measure"
-  ppres: "Website, online shop or web app according to your image and adapted to all digital media (computers, smartphones and tablets)"
+  ppres: "Websites, online shops or web apps according to your image and adapted to all digital media (computers, smartphones and tablets)"
   paths:
     index: "home"
