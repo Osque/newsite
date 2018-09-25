@@ -24,10 +24,8 @@
 
             <!-- Logo -->
             <div id="logo">
-                <a class="ajax-link" data-type="page-transition">
-                    <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
-                    <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
-                </a>
+              <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
+              <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
             </div>
             <!--/Logo -->
 
@@ -58,15 +56,15 @@
                         <ul class="main-menu">
 
                           <% if I18n.locale == :fr %>
-                            <li class="mp active"> <%= link_to "Home", "http://www.mosdev.fr/fr/home" %> </li>
+                            <li class="mp active"> <%= link_to "Accueil", "http://www.mosdev.fr/fr/home" %> </li>
                             <li class="mp"> <%= link_to "Portfolio", "http://www.mosdev.fr/fr/portfolio" %> </li>
                             <li class="mp"> <%= link_to "Contact", "http://www.mosdev.fr/fr/contact" %> </li>
-                            <li> <%= link_to (image_tag "UK.png", height: 50), "/en/#{current_page.path.split('/').last}" %> </li>
+                            <li class="mp"> <%= link_to (image_tag "UK.png", height: 50), "/en/#{current_page.path.split('/').last}" %> </li>
                           <% else %>
                             <li class="mp active"> <%= link_to "Home", "http://www.mosdev.fr/en/home" %> </li>
                             <li class="mp"> <%= link_to "Portfolio", "http://www.mosdev.fr/en/portfolio" %> </li>
                             <li class="mp"> <%= link_to "Contact", "http://www.mosdev.fr/en/contact" %> </li>
-                            <li> <%= link_to (image_tag "France.png", height: 50), "/fr/#{current_page.path.split('/').last}" %> </li>
+                            <li class="mp"> <%= link_to (image_tag "France.png", height: 50), "/fr/#{current_page.path.split('/').last}" %> </li>
                           <% end %>
                         </ul>
                     </nav>
@@ -90,7 +88,7 @@
                         <div class="inner">
                             <h1 class="hero-title">Oscar Maybon</h1>
                             <br>
-                            <h5 class="hero-subtitle">Freelance web <%= t("developer") %></h5>
+                            <h5 class="hero-subtitle"> <%= t("presentation") %></h5>
 
                         </div>
                     </div>
@@ -125,12 +123,13 @@
                         <div class="container">
                             <hr><hr><hr><hr><hr><hr><hr>
                             <hr><hr><hr><hr><hr><hr><hr>
+                            <hr><hr><hr><hr><hr><hr><hr>
 
                             <h3 class="has-animation" data-delay="10"><%= t("tpres") %></h3>
                             <hr>
                             <h5 class="has-animation" data-delay="10"><%= t("ppres") %> </h5>
 
-                            <hr><hr><hr><hr><hr>
+                            <hr><hr><hr>
 
                     <!-- Row -->
                     <div class="vc_row row_padding_top row_padding_bottom text-align-center">
@@ -198,14 +197,14 @@
 
                                 <!-- Clients Table -->
                                 <ul class="clients-table has-animation" data-delay="10">
-                                    <li><img src="/images/rails.png" alt="client"></li>
-                                    <li><img src="/images/html.png" alt="client" width="100%"></li>
-                                    <li><img src="/images/client-jquery.png" alt="client"></li>
-                                    <li><img src="/images/css.png" alt="client"></li>
-                                    <li><img src="/images/client-github.png" alt="client"></li>
-                                    <li width="100%"><img src="/images/sqlcolor.png" alt="client" height="40px" width="40px"></li>
-                                    <li><img src="/images/js.png" alt="client" ></li>
-                                    <li><img src="/images/heroku.png" alt="client"></li>
+                                    <li><img src="/images/rails.png"></li>
+                                    <li><img src="/images/html.png" width="100%"></li>
+                                    <li><img src="/images/client-jquery.png"></li>
+                                    <li><img src="/images/css.png"></li>
+                                    <li><img src="/images/client-github.png"></li>
+                                    <li><img src="/images/sqlcolor.png" width="100%"></li>
+                                    <li><img src="/images/js.png" ></li>
+                                    <li><img src="/images/heroku.png"></li>
                                 </ul>
                                 <!--/Clients Table -->
 
@@ -262,7 +261,11 @@
 
                             <hr>
 
-                            <a href="contact" class="mosdev-button rounded outline ajax-link has-animation" data-delay="100" data-type="page-transition" ><span><%= t('contact-title') %></span></a>
+                          <% if I18n.locale == :fr %>
+                            <a href="http://www.mosdev.fr/fr/contact" class="mosdev-button rounded outline ajax-link has-animation" data-delay="100" data-type="page-transition" ><span><%= t('contact-title') %></span></a>
+                          <% else %>
+                            <a href="http://www.mosdev.fr/en/contact" class="mosdev-button rounded outline ajax-link has-animation" data-delay="100" data-type="page-transition" ><span><%= t('contact-title') %></span></a>
+                          <% end %>
 
                         </div>
 
