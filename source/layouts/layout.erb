@@ -8,9 +8,9 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>
       <% if I18n.locale == :fr %>
-        Oscar Maybon | Web développeur freelance à Bordeaux <%= current_page.data.title %>
+        Oscar Maybon | Web développeur freelance à Bordeaux | MosDev <%= current_page.data.title %>
       <% else %>
-        Oscar Maybon | Freelance web developer in Bordeaux <%= current_page.data.title %>
+        Oscar Maybon | Freelance web developer in Bordeaux | MosDev <%= current_page.data.title %>
       <% end %>
     </title>
     <%= stylesheet_link_tag "application" %>
