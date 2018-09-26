@@ -104,6 +104,9 @@ GEM
       middleman-core (>= 3.0.0)
     middleman-protect-emails (0.4.0)
       middleman-core (>= 3.4)
+    middleman-search_engine_sitemap (1.4.0)
+      builder
+      middleman-core (~> 4.0)
     middleman-sitemap (0.0.13)
       middleman-core (>= 3.2.2)
     middleman-sprockets (4.1.1)
@@ -165,6 +168,7 @@ DEPENDENCIES
   middleman-google-analytics
   middleman-meta-tags
   middleman-protect-emails
+  middleman-search_engine_sitemap
   middleman-sitemap
   middleman-sprockets
   pry-byebug

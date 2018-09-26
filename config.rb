@@ -27,4 +27,5 @@ activate :deploy do |deploy|
   deploy.deploy_method = :git
 end
 
-
+set :url_root, 'http://www.mosdev.fr'
+activate :search_engine_sitemap
