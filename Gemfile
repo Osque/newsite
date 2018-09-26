@@ -15,4 +15,3 @@ gem 'middleman-protect-emails'
 gem 'middleman-meta-tags'
 gem "builder"
 gem "middleman-sitemap"
-gem 'middleman-google-analytics'
