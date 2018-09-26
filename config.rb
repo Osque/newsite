@@ -15,7 +15,6 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 
 configure :build do
-  activate :sitemap, :gzip => false, :hostname => "http://www.mosdev.fr"
   activate :minify_css
   activate :minify_javascript
   activate :asset_hash
