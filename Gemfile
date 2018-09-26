@@ -14,3 +14,4 @@ gem 'jquery-middleman'
 gem 'middleman-protect-emails'
 gem 'middleman-meta-tags'
 gem "builder"
+gem "middleman-sitemap"

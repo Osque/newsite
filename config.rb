@@ -20,6 +20,7 @@ configure :build do
   activate :asset_hash
   activate :relative_assets
   set :relative_links, true
+  activate :sitemap, hostname: data.settings.site.url
 end
 
 activate :deploy do |deploy|
@@ -28,6 +29,3 @@ activate :deploy do |deploy|
 end
 
 require 'builder'
-page "/sitemap.xml", :layout => false
-activate :sitemap, :gzip => false
-activate :sitemap, :hostname => "http://www.mosdev.fr"
