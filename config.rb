@@ -15,15 +15,18 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 
 configure :build do
+  activate :sitemap, :hostname => "http://www.mosdev.fr"
+  activate :sitemap, :gzip => false
   activate :minify_css
   activate :minify_javascript
   activate :asset_hash
   activate :relative_assets
   set :relative_links, true
-  activate :sitemap, :hostname => "http://www.mosdev.fr"
 end
 
 activate :deploy do |deploy|
   deploy.build_before = true
   deploy.deploy_method = :git
 end
+
+
