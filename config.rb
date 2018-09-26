@@ -4,6 +4,7 @@ end
 
 activate :sprockets
 activate :gzip
+activate :meta_tags
 activate :protect_emails
 activate :i18n, :mount_at_root => :fr
 activate :directory_indexes
