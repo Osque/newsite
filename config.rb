@@ -26,3 +26,6 @@ activate :deploy do |deploy|
   deploy.build_before = true
   deploy.deploy_method = :git
 end
+
+require 'builder'
+page "/sitemap.xml", :layout => false
