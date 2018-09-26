@@ -56,15 +56,15 @@
                         <ul class="main-menu">
 
                           <% if I18n.locale == :fr %>
-                            <li class="mp active"> <%= link_to "Accueil", "http://www.mosdev.fr/fr/home" %> </li>
-                            <li class="mp"> <%= link_to "Portfolio", "http://www.mosdev.fr/fr/portfolio" %> </li>
-                            <li class="mp"> <%= link_to "Contact", "http://www.mosdev.fr/fr/contact" %> </li>
+                            <li class="mp active"> <%= link_to "Accueil", "http://www.mosdev.fr" %> </li>
+                            <li class="mp"> <%= link_to "Portfolio", "http://www.mosdev.fr/portfolio" %> </li>
+                            <li class="mp"> <%= link_to "Contact", "http://www.mosdev.fr/contact" %> </li>
                             <li class="mp"> <%= link_to (image_tag "UK.png", height: 50), "/en/#{current_page.path.split('/').last}" %> </li>
                           <% else %>
-                            <li class="mp active"> <%= link_to "Home", "http://www.mosdev.fr/en/home" %> </li>
+                            <li class="mp active"> <%= link_to "Home", "http://www.mosdev.fr/en" %> </li>
                             <li class="mp"> <%= link_to "Portfolio", "http://www.mosdev.fr/en/portfolio" %> </li>
                             <li class="mp"> <%= link_to "Contact", "http://www.mosdev.fr/en/contact" %> </li>
-                            <li class="mp"> <%= link_to (image_tag "France.png", height: 50), "/fr/#{current_page.path.split('/').last}" %> </li>
+                            <li class="mp"> <%= link_to (image_tag "France.png", height: 50), "http://www.mosdev.fr" %> </li>
                           <% end %>
                         </ul>
                     </nav>

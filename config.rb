@@ -3,7 +3,8 @@ activate :autoprefixer do |prefix|
 end
 
 activate :sprockets
-activate :i18n, :mount_at_root => false
+activate :gzip
+activate :i18n, :mount_at_root => :fr
 activate :directory_indexes
 set :trailing_slash, false
 

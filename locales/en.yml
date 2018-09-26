@@ -14,5 +14,3 @@ en:
   back: "Back-end development"
   next: "Next"
   prev: "Back"
-  paths:
-    index: "home"

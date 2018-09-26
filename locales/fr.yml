@@ -14,5 +14,3 @@ fr:
   back: "Développement back-end"
   next: "Suivant"
   prev: "Précédent"
-  paths:
-    index: "home"
