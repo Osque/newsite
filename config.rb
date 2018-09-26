@@ -29,4 +29,5 @@ end
 
 require 'builder'
 page "/sitemap.xml", :layout => false
-activate :sitemap, :gzip => false, :hostname => "http://www.mosdev.fr"
+activate :sitemap, :gzip => false
+activate :sitemap, :hostname => "http://www.mosdev.fr"
