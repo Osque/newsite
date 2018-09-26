@@ -28,7 +28,7 @@ configure :build do
   activate :asset_hash
   activate :relative_assets
   set :relative_links, true
-  activate :sitemap, hostname: data.settings.site.url
+  activate :sitemap, :hostname => "http://www.mosdev.fr"
 end
 
 activate :deploy do |deploy|
