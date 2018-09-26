@@ -50,8 +50,6 @@
 
   </head>
   <body>
-    <%#= partial "layouts/navbar" %>
-    <%= yield %>
-        <!-- Bootstrap core JavaScript -->
+    <%= yield(:after_js) %>
   </body>
 </html>
