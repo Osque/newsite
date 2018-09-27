@@ -86,6 +86,8 @@
                 <div id="hero-styles" class="opacity-onscroll parallax-onscroll">
                     <div id="hero-caption">
                         <div class="inner">
+                            <img src="images/moi.jpg" class="avatar-picture">
+                            <hr>
                             <h1 class="hero-title">Oscar Maybon</h1>
                             <br>
                             <h5 class="hero-subtitle"> <%= t("presentation") %></h5>
@@ -136,52 +138,45 @@
 
                         <div class="container">
 
-                            <h3 class="has-animation" data-delay="100">Just some of the reasons <br class="destroy">users choose us</h3>
-
-                            <hr><hr>
 
                             <div class="one_half has-animation" data-delay="150">
                                 <div class="mosdev-icon">
-                                    <i class="fa fa-life-ring" aria-hidden="true"></i>
-                                    <h6>Friendly Support</h6>
-                                    <p>We will be with you every step of the way. It’s a promise!</p>
-                                </div>
-                            </div>
-
-                            <div class="one_half last has-animation" data-delay="150">
-                                <div class="mosdev-icon">
-                                    <i class="fa fa-repeat" aria-hidden="true"></i>
-                                    <h6>Money Back Guarantee</h6>
-                                    <p>If you don’t like our theme, we will refund all your money back.</p>
-                                </div>
-                            </div>
-
-                            <hr>
-
-                            <div class="one_half has-animation" data-delay="200">
-                                <div class="mosdev-icon">
-                                    <i class="fa fa-code" aria-hidden="true"></i>
-                                    <h6> <%= t('front') %> </h6>
-                                    <p>All Themes are made by Envato Elite Author - mosdev</p>
+                                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                    <h6> <%= t('concept') %> </h6>
+                                    <p><%= t('concept-desc') %> </p>
                                 </div>
                             </div>
 
                             <div class="one_half last has-animation" data-delay="200">
                                 <div class="mosdev-icon">
-                                    <i class="fa fa-cogs" aria-hidden="true"></i>
-                                    <h6> <%= t('back') %> </h6>
-                                    <p>Send us a message with everything you need to customize.</p>
+                                    <i class="fa fa-code" aria-hidden="true"></i>
+                                    <h6> <%= t('front') %> </h6>
+                                    <p> <%= t('front-desc') %> </p>
                                 </div>
                             </div>
 
+                            <div class="one_half has-animation" data-delay="200">
+                                <div class="mosdev-icon">
+                                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                                    <h6> <%= t('back') %> </h6>
+                                    <p> <%= t('back-desc') %> </p>
+                                </div>
+                            </div>
+
+                            <div class="one_half last has-animation" data-delay="150">
+                                <div class="mosdev-icon">
+                                    <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                                    <h6> <%= t('host') %> </h6>
+                                    <p> <%= t('host-desc') %> </p>
+                                </div>
+                            </div>
 
                         </div>
 
                     </div>
                     <!--/Row -->
 
-                            <h4 class="has-animation" data-delay="10">Our clients:</h4>
-                            <p class="has-animation" data-delay="10">Proudly served some of the most famous brands:</p>
+                            <h4 class="has-animation" data-delay="10"> <%= t('techno') %> :</h4>
 
                             <hr><hr>
 
@@ -212,66 +207,26 @@
                     </div>
                     <!--/Row -->
 
-
-
-
-
+                    <hr><hr>
 
                     <!-- Row -->
                     <div class="vc_row small row_padding_top row_padding_bottom text-align-center">
 
                         <div class="container">
 
-                            <h3 class="has-animation" data-delay="100">What people are saying about us</h3>
-              <hr>
-
-                            <div class="text-carousel has-animation" data-delay="10">
-
-                                <div class="text-carousel-item">
-                                    <p>"These guys are amazing. I really like this theme and the customer support is just amazing. <br class="destroy">Thank you for all of your support."</p>                                    <div class="user-review">Sultan0254 - Themeforest</div>
-                                </div>
-
-
-                                <div class="text-carousel-item">
-                                    <p>"The design is beautiful, elegant and minimal. The customer service was amazing, asked for a <br class="destroy">404 page and they provided me one free of charge. "</p>
-                                    <div class="user-review">Rmbettencourt - Themeforest</div>
-                                </div>
-
-
-                                <div class="text-carousel-item">
-                                    <p>"Maestro is one of my favorite theme and I bought quite a few from ThemeForest"</p>
-                                    <div class="user-review">Oratorio - Themeforest</div>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                    <!--/Row -->
-
-
-                    <!-- Row -->
-                    <div class="vc_row small row_padding_top row_padding_bottom text-align-center">
-
-                        <div class="container">
-
-                            <h2 class="has-animation" data-delay="10">Whatever your needs, we're looking forward to hearing from you</h2>
+                            <h4 class="has-animation" data-delay="10"> <%= t('contact-desc') %> </h4>
 
                             <hr>
 
                           <% if I18n.locale == :fr %>
-                            <a href="http://www.mosdev.fr/fr/contact" class="mosdev-button rounded outline ajax-link has-animation" data-delay="100" data-type="page-transition" ><span><%= t('contact-title') %></span></a>
+                            <%= link_to "Contactez-moi", "http://www.mosdev.fr/contact", class: "mosdev-button rounded outline ajax-link has-animation animate-in" %>
                           <% else %>
-                            <a href="http://www.mosdev.fr/en/contact" class="mosdev-button rounded outline ajax-link has-animation" data-delay="100" data-type="page-transition" ><span><%= t('contact-title') %></span></a>
+                            <a ></a> <%= link_to "Contact me", "http://www.mosdev.fr/en/contact", class: "mosdev-button rounded outline ajax-link has-animation animate-in" %>
                           <% end %>
-
                         </div>
 
                     </div>
                     <!--/Row -->
-
 
 
               </div>
@@ -286,7 +241,7 @@
         <footer class="">
 
 
-                <div id="page-action-holder-right" data-tooltip="Go Top" data-placement="top">
+                <div id="page-action-holder-right" data-tooltip="<%= t('gotop') %>" data-placement="top">
                     <div id="scrolltotop">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="10px" y="10px" width="40px" height="40px" viewBox="0 0 80 80" xml:space="preserve">
                             <circle class="circle-action is-inner" cx="40" cy="40" r="36" />
