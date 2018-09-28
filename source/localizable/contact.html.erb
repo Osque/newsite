@@ -30,10 +30,21 @@ title:
           <div id="header-container">
 
             <!-- Logo -->
-            <div id="logo">
-              <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
-              <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
-            </div>
+            <% if I18n.locale == :fr %>
+              <div id="logo">
+                <a href="http://www.mosdev.fr">
+                  <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
+                  <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
+                </a>
+              </div>
+            <% else %>
+              <div id="logo">
+                <a href="http://www.mosdev.fr/en">
+                  <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
+                  <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
+                </a>
+              </div>
+            <% end %>
             <!--/Logo -->
 
             <!-- Menu Burger -->
