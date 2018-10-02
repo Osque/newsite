@@ -1,3 +1,10 @@
+---
+title:
+  fr: Contact | Oscar Maybon - Web développeur freelance à Bordeaux
+  en: Contact | Oscar Maybon - Freelance web developer in Bordeaux
+---
+
+
 <body class="hidden">
 
   <main>
@@ -5,7 +12,7 @@
     <div class="cd-index cd-main-content">
 
       <!-- Page Content -->
-      <div id="page-content" class="" data-bgcolor="#eee">
+      <div id="page-content" data-bgcolor="#eee">
 
         <!-- Background Lines -->
         <div class="bg-lines hidden">
@@ -23,12 +30,21 @@
           <div id="header-container">
 
             <!-- Logo -->
-            <div id="logo">
-              <a class="ajax-link" data-type="page-transition" href="home">
-                <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
-                <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
-              </a>
-            </div>
+            <% if I18n.locale == :fr %>
+              <div id="logo">
+                <a href="http://www.mosdev.fr">
+                  <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
+                  <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
+                </a>
+              </div>
+            <% else %>
+              <div id="logo">
+                <a href="http://www.mosdev.fr/en">
+                  <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
+                  <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
+                </a>
+              </div>
+            <% end %>
             <!--/Logo -->
 
             <!-- Menu Burger -->
@@ -56,15 +72,18 @@
 
               <nav>
                 <ul class="main-menu">
-                  <li class="mp"><a class="ajax-link menu-link" data-type="page-transition" href="home"><span></span>Home</a></li>
-                  <li class="mp"><a class="ajax-link menu-link" data-type="page-transition" href="portfolio"><span></span>Portfolio</a></li>
-                  <li class="mp active"><a class="ajax-link menu-link" data-type="page-transition" href="contact"><span></span>Contact</a></li>
-                  <li>  <% if I18n.locale == :fr %>
-                            <%= link_to (image_tag "UK.png", height: 50), "/en/#{current_page.path.split('/').last}" %>
-                        <% else %>
-                            <%= link_to (image_tag "France.png", height: 50), "/fr/#{current_page.path.split('/').last}" %>
-                        <% end %>
-                  </li>
+
+                  <% if I18n.locale == :fr %>
+                    <li class="mp"> <%= link_to "Accueil", "http://www.mosdev.fr" %> </li>
+                    <li class="mp"> <%= link_to "Portfolio", "http://www.mosdev.fr/portfolio" %> </li>
+                    <li class="mp active"> <%= link_to "Contact", "http://www.mosdev.fr/contact" %> </li>
+                    <li class="mp"> <%= link_to (image_tag "UK.png", height: 50), "/en/#{current_page.path.split('/').last}" %> </li>
+                  <% else %>
+                    <li class="mp active"> <%= link_to "Home", "http://www.mosdev.fr/en" %> </li>
+                    <li class="mp"> <%= link_to "Portfolio", "http://www.mosdev.fr/en/portfolio" %> </li>
+                    <li class="mp active"> <%= link_to "Contact", "http://www.mosdev.fr/en/contact" %> </li>
+                    <li class="mp"> <%= link_to (image_tag "France.png", height: 50), "http://www.mosdev.fr/contact" %> </li>
+                  <% end %>
                 </ul>
               </nav>
 
@@ -124,18 +143,24 @@
 
                     <div id="message"></div>
 
-                    <form method="post" action="contact.php" name="contactform" id="contactform">
+                    <form method="POST" action="https://formspree.io/contact@mosdev.fr">
                       <div class="name-box">
-                        <input name="name" type="text" id="name" size="30"  onfocus="if(this.value == 'Full Name') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Full Name'; }" value="Full Name" ><label class="input_label"></label>
+                        <input name="Prénom" type="text" id="surname" size="30"  onfocus="if(this.value == '<%= t('surname') %>') { this.value = ''; }" onblur="if(this.value == '') { this.value = '<%= t('surname') %>'; }" value="<%= t('surname') %>" ><label class="input_label"></label>
                       </div>
                       <div class="email-box">
-                        <input name="email" type="text" id="email" size="30" onfocus="if(this.value == 'E-mail') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'E-mail'; }" value="E-mail" ><label class="input_label"></label>
+                        <input name="Nom" type="text" id="name" size="30"  onfocus="if(this.value == '<%= t('name') %>') { this.value = ''; }" onblur="if(this.value == '') { this.value = '<%= t('name') %>'; }" value="<%= t('name') %>" ><label class="input_label"></label>
+                      </div>
+                      <div class="name-box">
+                        <input name="Téléphone" type="text" id="phone" size="30"  onfocus="if(this.value == '<%= t('phone') %>') { this.value = ''; }" onblur="if(this.value == '') { this.value = '<%= t('phone') %>'; }" value="<%= t('phone') %>" ><label class="input_label"></label>
+                      </div>
+                      <div class="email-box">
+                        <input name="Email" type="text" id="email" size="30" onfocus="if(this.value == 'Email') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Email'; }" value="Email" ><label class="input_label"></label>
                       </div>
                       <div class="message-box">
-                        <textarea name="comments" cols="40" rows="4" id="comments" onfocus="if(this.value == 'Your Message') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Your Message'; }" >Your Message</textarea><label class="input_label slow"></label>
+                        <textarea name="Message" cols="40" rows="4" id="comments" onfocus="if(this.value == 'Message') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Message'; }" >Message</textarea><label class="input_label slow"></label>
                       </div>
                       <div class="submit-box">
-                        <input type="submit" class="send_message mosdev-button outline" id="submit" value="Submit" />
+                        <input type="submit" class="send_message mosdev-button outline" id="submit" value= <%= t('submit') %> />
                       </div>
                     </form>
 
@@ -152,26 +177,34 @@
               <!-- Row -->
               <div class="vc_row text-align-center row_padding_top row_padding_bottom small has-animation"  data-delay="0">
 
-                <div class="container">
+                <div class="container text-align-center">
 
-                  <div class="one_third">
+                  <div class=" one_third">
+                    <div class="mosdev-icon">
+                      <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                    </div>
+
+                    <h6><a href="#" class="link"><span>+33 6 31 09 75 80</span></a></h6>
+                    <p><%= t('phone') %></p>
+                  </div>
+
+                  <div class=" one_third">
+                    <div class="mosdev-icon">
+                      <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                    </div>
+
+                    <h6><a href="https://www.google.fr/maps/place/Bordeaux/@44.8637065,-0.6561808,12z/data=!3m1!4b1!4m5!3m4!1s0xd5527e8f751ca81:0x796386037b397a89!8m2!3d44.837789!4d-0.57918" target="_blank" class="link"><span>Bordeaux</span></a></h6>
+                    <p>France</p>
+                  </div>
+
+                  <div class="one_third last">
                     <div class="mosdev-icon">
                       <i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i>
                     </div>
 
                     <h6><a href="mailto:contact@mosdev.fr" class="link"><span>contact@mosdev.fr</span></a></h6>
                     <p>Email</p>
-                  </div>
-
-
-                  <div class=" one_third last">
-                    <div class="mosdev-icon">
-                      <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
                     </div>
-
-                    <h6>+33 6 31 09 75 80</h6>
-                    <p>Phone</p>
-                  </div>
 
                 </div>
 
@@ -189,27 +222,6 @@
         <!-- Footer -->
         <footer class="">
           <div id="footer-container">
-            <a id="page-action-holder-left" class="ajax-link" href="portfolio" data-type="page-transition" data-tooltip="Back to Works" data-placement="top">
-              <div id="backtoworks">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="20px" y="20px" width="40px" height="40px" viewBox="0 0 80 80" xml:space="preserve">
-                  <circle class="circle-action is-inner" cx="40" cy="40" r="36" />
-                  <circle class="circle-action is-outer" cx="40" cy="40" r="36" />
-                </svg>
-                <i class="fa fa-times" aria-hidden="true"></i>
-                <div class="circle-line"></div>
-              </div>
-            </a>
-
-            <div id="page-action-holder-right" data-tooltip="Go Top" data-placement="top">
-              <div id="scrolltotop">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="10px" y="10px" width="40px" height="40px" viewBox="0 0 80 80" xml:space="preserve">
-                  <circle class="circle-action is-inner" cx="40" cy="40" r="36" />
-                  <circle class="circle-action is-outer" cx="40" cy="40" r="36" />
-                </svg>
-                <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                <div class="circle-line"></div>
-              </div>
-            </div>
 
                 <ul class="socials-text">
                     <li><a href="https://www.linkedin.com/in/oscar-maybon-8425276a/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
@@ -234,13 +246,5 @@
 
   <div class="cd-cover-layer"></div>
 
-
-  <script src="javascripts/jquery.js"></script>
-  <script src="javascripts/plugins.js"></script>
-  <script src="javascripts/scripts.js"></script>
-
-
-
 </body>
 
-</html>
