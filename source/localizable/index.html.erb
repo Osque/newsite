@@ -1,10 +1,3 @@
----
-title:
-  fr: Oscar Maybon - Web développeur freelance à Bordeaux | MosDev
-  en: Oscar Maybon - Freelance web developer in Bordeaux | MosDev
----
-
-
 <body class="hidden">
 
   <main>
@@ -30,21 +23,12 @@ title:
             <div id="header-container">
 
             <!-- Logo -->
-            <% if I18n.locale == :fr %>
-              <div id="logo">
-                <a href="http://www.mosdev.fr">
-                  <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
-                  <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
+            <div id="logo">
+                <a class="ajax-link" data-type="page-transition" href="home">
+                    <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
+                    <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
                 </a>
-              </div>
-            <% else %>
-              <div id="logo">
-                <a href="http://www.mosdev.fr/en">
-                  <img class="black-logo" src="/images/logo.png" alt="MosDev Logo">
-                  <img class="white-logo" src="/images/logo-white.png" alt="MosDev Logo">
-                </a>
-              </div>
-            <% end %>
+            </div>
             <!--/Logo -->
 
             <!-- Menu Burger -->
@@ -72,18 +56,15 @@ title:
 
                     <nav>
                         <ul class="main-menu">
-
-                          <% if I18n.locale == :fr %>
-                            <li class="mp active"> <%= link_to "Accueil", "http://www.mosdev.fr" %> </li>
-                            <li class="mp"> <%= link_to "Portfolio", "http://www.mosdev.fr/portfolio" %> </li>
-                            <li class="mp"> <%= link_to "Contact", "http://www.mosdev.fr/contact" %> </li>
-                            <li class="mp"> <%= link_to (image_tag "UK.png", height: 50), "/en/#{current_page.path.split('/').last}" %> </li>
-                          <% else %>
-                            <li class="mp active"> <%= link_to "Home", "http://www.mosdev.fr/en" %> </li>
-                            <li class="mp"> <%= link_to "Portfolio", "http://www.mosdev.fr/en/portfolio" %> </li>
-                            <li class="mp"> <%= link_to "Contact", "http://www.mosdev.fr/en/contact" %> </li>
-                            <li class="mp"> <%= link_to (image_tag "France.png", height: 50), "http://www.mosdev.fr" %> </li>
-                          <% end %>
+                            <li class="mp active"><a class="ajax-link menu-link" data-type="page-transition" href="home"><span></span>Home</a></li>
+                            <li class="mp"><a class="ajax-link menu-link" data-type="page-transition" href="portfolio"><span></span>Portfolio</a></li>
+                            <li class="mp"><a class="ajax-link menu-link" data-type="page-transition" href="contact"><span></span>Contact</a></li>
+                            <li>   <% if I18n.locale == :fr %>
+                                      <%= link_to (image_tag "UK.png", height: 50), "/en/#{current_page.path.split('/').last}" %>
+                                  <% else %>
+                                      <%= link_to (image_tag "France.png", height: 50), "/fr/#{current_page.path.split('/').last}" %>
+                                  <% end %>
+                            </li>
                         </ul>
                     </nav>
 
@@ -104,16 +85,14 @@ title:
                 <div id="hero-styles" class="opacity-onscroll parallax-onscroll">
                     <div id="hero-caption">
                         <div class="inner">
-                            <img src="/images/moi.jpg" class="avatar-picture">
-                            <hr>
                             <h1 class="hero-title">Oscar Maybon</h1>
                             <br>
-                            <h5 class="hero-subtitle"> <%= t("presentation") %></h5>
+                            <h5 class="hero-subtitle">Freelance web <%= t("developer") %></h5>
 
                         </div>
                     </div>
                     <div class="scroll-down-wrap no-border">
-                        <a href="#scrolll" class="section-down-arrow js-scrollTo">
+                        <a href="#" class="section-down-arrow ">
               <svg class="nectar-scroll-icon" viewBox="0 0 30 45" enable-background="new 0 0 30 45">
                 <path class="nectar-scroll-icon-path" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" d="M15,1.118c12.352,0,13.967,12.88,13.967,12.88v18.76  c0,0-1.514,11.204-13.967,11.204S0.931,32.966,0.931,32.966V14.05C0.931,14.05,2.648,1.118,15,1.118z">
                 </path>
@@ -133,7 +112,7 @@ title:
 
              <!-- Main Content -->
             <div id="main-content">
-              <div id="main-page-content" data-bgcolor="red">
+              <div id="main-page-content">
 
 
 
@@ -143,58 +122,64 @@ title:
                         <div class="container">
                             <hr><hr><hr><hr><hr><hr><hr>
                             <hr><hr><hr><hr><hr><hr><hr>
-                            <hr><hr><hr><hr><hr><hr id=scrolll><hr>
 
                             <h3 class="has-animation" data-delay="10"><%= t("tpres") %></h3>
                             <hr>
                             <h5 class="has-animation" data-delay="10"><%= t("ppres") %> </h5>
 
-                            <hr><hr><hr>
+                            <hr><hr><hr><hr><hr>
 
                     <!-- Row -->
                     <div class="vc_row row_padding_top row_padding_bottom text-align-center">
 
                         <div class="container">
 
+                            <h3 class="has-animation" data-delay="100">Just some of the reasons <br class="destroy">users choose us</h3>
+
+                            <hr><hr>
 
                             <div class="one_half has-animation" data-delay="150">
                                 <div class="mosdev-icon">
-                                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                                    <h6> <%= t('concept') %> </h6>
-                                    <p><%= t('concept-desc') %> </p>
-                                </div>
-                            </div>
-
-                            <div class="one_half last has-animation" data-delay="200">
-                                <div class="mosdev-icon">
-                                    <i class="fa fa-code" aria-hidden="true"></i>
-                                    <h6> <%= t('front') %> </h6>
-                                    <p> <%= t('front-desc') %> </p>
-                                </div>
-                            </div>
-
-                            <div class="one_half has-animation" data-delay="200">
-                                <div class="mosdev-icon">
-                                    <i class="fa fa-cogs" aria-hidden="true"></i>
-                                    <h6> <%= t('back') %> </h6>
-                                    <p> <%= t('back-desc') %> </p>
+                                    <i class="fa fa-life-ring" aria-hidden="true"></i>
+                                    <h6>Friendly Support</h6>
+                                    <p>We will be with you every step of the way. It’s a promise!</p>
                                 </div>
                             </div>
 
                             <div class="one_half last has-animation" data-delay="150">
                                 <div class="mosdev-icon">
-                                    <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                                    <h6> <%= t('host') %> </h6>
-                                    <p> <%= t('host-desc') %> </p>
+                                    <i class="fa fa-repeat" aria-hidden="true"></i>
+                                    <h6>Money Back Guarantee</h6>
+                                    <p>If you don’t like our theme, we will refund all your money back.</p>
                                 </div>
                             </div>
+
+                            <hr>
+
+                            <div class="one_half has-animation" data-delay="200">
+                                <div class="mosdev-icon">
+                                    <i class="fa fa-trophy" aria-hidden="true"></i>
+                                    <h6>Premium Quality</h6>
+                                    <p>All Themes are made by Envato Elite Author - mosdev</p>
+                                </div>
+                            </div>
+
+                            <div class="one_half last has-animation" data-delay="200">
+                                <div class="mosdev-icon">
+                                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                                    <h6>Need Custom Work?</h6>
+                                    <p>Send us a message with everything you need to customize.</p>
+                                </div>
+                            </div>
+
 
                         </div>
 
                     </div>
                     <!--/Row -->
 
-                            <h4 class="has-animation" data-delay="10"> <%= t('techno') %> :</h4>
+                            <h4 class="has-animation" data-delay="10">Our clients:</h4>
+                            <p class="has-animation" data-delay="10">Proudly served some of the most famous brands:</p>
 
                             <hr><hr>
 
@@ -210,14 +195,14 @@ title:
 
                                 <!-- Clients Table -->
                                 <ul class="clients-table has-animation" data-delay="10">
-                                    <li><img src="/images/rails.png"></li>
-                                    <li><img src="/images/html.png"></li>
-                                    <li><img src="/images/jquery.png"></li>
-                                    <li><img src="/images/css.png"></li>
-                                    <li><img src="/images/github.png"></li>
-                                    <li><img src="/images/ruby.png"></li>
-                                    <li><img src="/images/js.png" ></li>
-                                    <li><img src="/images/heroku.png"></li>
+                                    <li><img src="/images/rails.png" alt="client"></li>
+                                    <li><img src="/images/html.png" alt="client" width="100%"></li>
+                                    <li><img src="/images/client-jquery.png" alt="client"></li>
+                                    <li><img src="/images/css.png" alt="client"></li>
+                                    <li><img src="/images/client-github.png" alt="client"></li>
+                                    <li width="100%"><img src="/images/sqlcolor.png" alt="client" height="40px" width="40px"></li>
+                                    <li><img src="/images/js.png" alt="client" ></li>
+                                    <li><img src="/images/heroku.png" alt="client"></li>
                                 </ul>
                                 <!--/Clients Table -->
 
@@ -225,26 +210,62 @@ title:
                     </div>
                     <!--/Row -->
 
-                    <hr><hr>
+
+
+
+
 
                     <!-- Row -->
                     <div class="vc_row small row_padding_top row_padding_bottom text-align-center">
 
                         <div class="container">
 
-                            <h4 class="has-animation" data-delay="10"> <%= t('contact-desc') %> </h4>
+                            <h3 class="has-animation" data-delay="100">What people are saying about us</h3>
+              <hr>
 
-                            <hr>
+                            <div class="text-carousel has-animation" data-delay="10">
 
-                          <% if I18n.locale == :fr %>
-                            <%= link_to "Contactez-moi", "http://www.mosdev.fr/contact", class: "mosdev-button rounded outline ajax-link has-animation animate-in" %>
-                          <% else %>
-                            <a ></a> <%= link_to "Contact me", "http://www.mosdev.fr/en/contact", class: "mosdev-button rounded outline ajax-link has-animation animate-in" %>
-                          <% end %>
+                                <div class="text-carousel-item">
+                                    <p>"These guys are amazing. I really like this theme and the customer support is just amazing. <br class="destroy">Thank you for all of your support."</p>                                    <div class="user-review">Sultan0254 - Themeforest</div>
+                                </div>
+
+
+                                <div class="text-carousel-item">
+                                    <p>"The design is beautiful, elegant and minimal. The customer service was amazing, asked for a <br class="destroy">404 page and they provided me one free of charge. "</p>
+                                    <div class="user-review">Rmbettencourt - Themeforest</div>
+                                </div>
+
+
+                                <div class="text-carousel-item">
+                                    <p>"Maestro is one of my favorite theme and I bought quite a few from ThemeForest"</p>
+                                    <div class="user-review">Oratorio - Themeforest</div>
+                                </div>
+
+                            </div>
+
+
                         </div>
 
                     </div>
                     <!--/Row -->
+
+
+                    <!-- Row -->
+                    <div class="vc_row small row_padding_top row_padding_bottom text-align-center">
+
+                        <div class="container">
+
+                            <h2 class="has-animation" data-delay="10">Whatever your needs, we're looking forward to hearing from you</h2>
+
+                            <hr>
+
+                            <a href="contact" class="mosdev-button rounded outline ajax-link has-animation" data-delay="100" data-type="page-transition" ><span><%= t('contact-title') %></span></a>
+
+                        </div>
+
+                    </div>
+                    <!--/Row -->
+
 
 
               </div>
@@ -259,7 +280,7 @@ title:
         <footer class="">
 
 
-                <div id="page-action-holder-right" data-tooltip="<%= t('gotop') %>" data-placement="top">
+                <div id="page-action-holder-right" data-tooltip="Go Top" data-placement="top">
                     <div id="scrolltotop">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="10px" y="10px" width="40px" height="40px" viewBox="0 0 80 80" xml:space="preserve">
                             <circle class="circle-action is-inner" cx="40" cy="40" r="36" />
@@ -294,4 +315,13 @@ title:
 
     <div class="cd-cover-layer"></div>
 
+
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/plugins.js"></script>
+    <script src="javascripts/scripts.js"></script>
+
+
+
 </body>
+
+</html>

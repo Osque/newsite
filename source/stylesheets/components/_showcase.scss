@@ -96,7 +96,6 @@
   }
 
   .section-image {
-    filter: brightness(70%);
     opacity:1;
     position:absolute;
     height:100%;
@@ -125,7 +124,6 @@
   }
 
   .section-image-mirror {
-    filter: brightness(70%);
     opacity:1!important;
     position:absolute;
     height:100%;
@@ -439,11 +437,4 @@
     font-size: 36px;
   }
 
-}
-
-
-.avatar-picture {
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
 }

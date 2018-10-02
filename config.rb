@@ -3,10 +3,7 @@ activate :autoprefixer do |prefix|
 end
 
 activate :sprockets
-activate :gzip
-activate :meta_tags
-activate :protect_emails
-activate :i18n, :mount_at_root => :fr
+activate :i18n, :mount_at_root => false
 activate :directory_indexes
 set :trailing_slash, false
 
@@ -27,15 +24,7 @@ activate :deploy do |deploy|
   deploy.deploy_method = :git
 end
 
-set :url_root, 'http://www.mosdev.fr'
-activate :search_engine_sitemap
-
-
-helpers do
-  def page_title(page)
-    return page.data.title.send(I18n.locale) if
-      page.data.title.is_a?(Hash) && page.data.title[I18n.locale]
-    return page.data.title if page.data.title
-    return "Fallback Title"
-  end
-end
+redirect "index.html", to: "fr/home.html"
+redirect "fr/index.html", to: "fr/home.html"
+redirect "home.html", to: "fr/home.html"
+redirect "en/index.html", to: "en/home.html"
